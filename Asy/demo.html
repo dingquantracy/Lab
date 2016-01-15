@@ -1,0 +1,26 @@
+<html>
+<head></head>
+<body>
+	<script src='Asy.js'></script>
+	<script>
+		var asy = new Asy();
+
+		asy.when(['A','B'], function(){
+			console.log('done---');
+		});
+
+
+		setTimeout(function(){
+			console.log('A');
+			asy.resolve('A');
+		}, 1000);
+
+
+		setTimeout(function(){
+			console.log('B');
+			asy.resolve('B');
+		}, 2000);
+
+	</script>
+</body>
+</html>
