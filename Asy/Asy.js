@@ -79,8 +79,15 @@
         }
     };
 
+    if (typeof define === 'function' && define.amd) {
+        define(function () {
+            return Asy;
+        });
+    }else{
+        exports.Asy = Asy;
+    }
 
-    exports.Asy = Asy;
+    
 
 }).call(this);
 
